@@ -1,0 +1,794 @@
+{
+  "itching": [
+    "itching",
+    "loss_of_appetite",
+    "yellowish_skin",
+    "fatigue"
+  ],
+  "skin_rash": [
+    "skin_rash",
+    "high_fever",
+    "itching",
+    "headache"
+  ],
+  "nodal_skin_eruptions": [
+    "nodal_skin_eruptions",
+    "itching",
+    "skin_rash",
+    "dischromic _patches"
+  ],
+  "continuous_sneezing": [
+    "continuous_sneezing",
+    "chills",
+    "redness_of_eyes",
+    "runny_nose"
+  ],
+  "shivering": [
+    "shivering",
+    "continuous_sneezing",
+    "chills",
+    "watering_from_eyes"
+  ],
+  "chills": [
+    "chills",
+    "high_fever",
+    "fatigue",
+    "headache"
+  ],
+  "joint_pain": [
+    "joint_pain",
+    "loss_of_appetite",
+    "nausea",
+    "vomiting"
+  ],
+  "stomach_pain": [
+    "stomach_pain",
+    "cough",
+    "chest_pain",
+    "itching"
+  ],
+  "acidity": [
+    "acidity",
+    "blurred_and_distorted_vision",
+    "indigestion",
+    "headache"
+  ],
+  "ulcers_on_tongue": [
+    "ulcers_on_tongue",
+    "chest_pain",
+    "stomach_pain",
+    "cough"
+  ],
+  "muscle_wasting": [
+    "muscle_wasting",
+    "high_fever",
+    "extra_marital_contacts",
+    "patches_in_throat"
+  ],
+  "vomiting": [
+    "vomiting",
+    "nausea",
+    "abdominal_pain",
+    "loss_of_appetite"
+  ],
+  "burning_micturition": [
+    "burning_micturition",
+    "itching",
+    "bladder_discomfort",
+    "continuous_feel_of_urine"
+  ],
+  "spotting_ urination": [
+    "spotting_ urination",
+    "itching",
+    "stomach_pain",
+    "skin_rash"
+  ],
+  "fatigue": [
+    "fatigue",
+    "high_fever",
+    "loss_of_appetite",
+    "vomiting"
+  ],
+  "weight_gain": [
+    "weight_gain",
+    "depression",
+    "abnormal_menstruation",
+    "swollen_extremeties"
+  ],
+  "anxiety": [
+    "anxiety",
+    "excessive_hunger",
+    "slurred_speech",
+    "irritability"
+  ],
+  "cold_hands_and_feets": [
+    "cold_hands_and_feets",
+    "depression",
+    "abnormal_menstruation",
+    "swollen_extremeties"
+  ],
+  "mood_swings": [
+    "mood_swings",
+    "irritability",
+    "abnormal_menstruation",
+    "fatigue"
+  ],
+  "weight_loss": [
+    "weight_loss",
+    "fatigue",
+    "restlessness",
+    "vomiting"
+  ],
+  "restlessness": [
+    "restlessness",
+    "excessive_hunger",
+    "weight_loss",
+    "fatigue"
+  ],
+  "lethargy": [
+    "lethargy",
+    "fatigue",
+    "malaise",
+    "itching"
+  ],
+  "patches_in_throat": [
+    "patches_in_throat",
+    "high_fever",
+    "extra_marital_contacts",
+    "muscle_wasting"
+  ],
+  "irregular_sugar_level": [
+    "irregular_sugar_level",
+    "increased_appetite",
+    "polyuria",
+    "weight_loss"
+  ],
+  "cough": [
+    "cough",
+    "chest_pain",
+    "high_fever",
+    "fatigue"
+  ],
+  "high_fever": [
+    "high_fever",
+    "fatigue",
+    "chills",
+    "vomiting"
+  ],
+  "sunken_eyes": [
+    "sunken_eyes",
+    "diarrhoea",
+    "vomiting",
+    "dehydration"
+  ],
+  "breathlessness": [
+    "breathlessness",
+    "chest_pain",
+    "high_fever",
+    "fatigue"
+  ],
+  "sweating": [
+    "sweating",
+    "fatigue",
+    "vomiting",
+    "chest_pain"
+  ],
+  "dehydration": [
+    "dehydration",
+    "diarrhoea",
+    "vomiting",
+    "sunken_eyes"
+  ],
+  "indigestion": [
+    "indigestion",
+    "blurred_and_distorted_vision",
+    "acidity",
+    "headache"
+  ],
+  "headache": [
+    "headache",
+    "vomiting",
+    "fatigue",
+    "high_fever"
+  ],
+  "yellowish_skin": [
+    "yellowish_skin",
+    "abdominal_pain",
+    "yellowing_of_eyes",
+    "loss_of_appetite"
+  ],
+  "dark_urine": [
+    "dark_urine",
+    "abdominal_pain",
+    "yellowish_skin",
+    "yellowing_of_eyes"
+  ],
+  "nausea": [
+    "nausea",
+    "vomiting",
+    "loss_of_appetite",
+    "fatigue"
+  ],
+  "loss_of_appetite": [
+    "loss_of_appetite",
+    "yellowing_of_eyes",
+    "fatigue",
+    "vomiting"
+  ],
+  "pain_behind_the_eyes": [
+    "pain_behind_the_eyes",
+    "loss_of_appetite",
+    "headache",
+    "nausea"
+  ],
+  "back_pain": [
+    "back_pain",
+    "headache",
+    "nausea",
+    "loss_of_appetite"
+  ],
+  "constipation": [
+    "constipation",
+    "fatigue",
+    "chills",
+    "high_fever"
+  ],
+  "abdominal_pain": [
+    "abdominal_pain",
+    "vomiting",
+    "yellowish_skin",
+    "loss_of_appetite"
+  ],
+  "diarrhoea": [
+    "diarrhoea",
+    "vomiting",
+    "nausea",
+    "fatigue"
+  ],
+  "mild_fever": [
+    "mild_fever",
+    "loss_of_appetite",
+    "yellowing_of_eyes",
+    "malaise"
+  ],
+  "yellow_urine": [
+    "yellow_urine",
+    "receiving_blood_transfusion",
+    "malaise",
+    "yellowing_of_eyes"
+  ],
+  "yellowing_of_eyes": [
+    "yellowing_of_eyes",
+    "loss_of_appetite",
+    "yellowish_skin",
+    "abdominal_pain"
+  ],
+  "acute_liver_failure": [
+    "acute_liver_failure",
+    "abdominal_pain",
+    "yellowing_of_eyes",
+    "loss_of_appetite"
+  ],
+  "fluid_overload": [
+    "fluid_overload",
+    "itching",
+    "skin_rash",
+    "nodal_skin_eruptions"
+  ],
+  "swelling_of_stomach": [
+    "swelling_of_stomach",
+    "yellowish_skin",
+    "vomiting",
+    "abdominal_pain"
+  ],
+  "swelled_lymph_nodes": [
+    "swelled_lymph_nodes",
+    "malaise",
+    "high_fever",
+    "fatigue"
+  ],
+  "malaise": [
+    "malaise",
+    "fatigue",
+    "high_fever",
+    "loss_of_appetite"
+  ],
+  "blurred_and_distorted_vision": [
+    "blurred_and_distorted_vision",
+    "excessive_hunger",
+    "irritability",
+    "fatigue"
+  ],
+  "phlegm": [
+    "phlegm",
+    "chest_pain",
+    "malaise",
+    "chills"
+  ],
+  "throat_irritation": [
+    "throat_irritation",
+    "congestion",
+    "runny_nose",
+    "redness_of_eyes"
+  ],
+  "redness_of_eyes": [
+    "redness_of_eyes",
+    "congestion",
+    "runny_nose",
+    "chest_pain"
+  ],
+  "sinus_pressure": [
+    "sinus_pressure",
+    "congestion",
+    "runny_nose",
+    "redness_of_eyes"
+  ],
+  "runny_nose": [
+    "runny_nose",
+    "congestion",
+    "redness_of_eyes",
+    "chest_pain"
+  ],
+  "congestion": [
+    "congestion",
+    "runny_nose",
+    "redness_of_eyes",
+    "chest_pain"
+  ],
+  "chest_pain": [
+    "chest_pain",
+    "cough",
+    "phlegm",
+    "malaise"
+  ],
+  "weakness_in_limbs": [
+    "weakness_in_limbs",
+    "loss_of_balance",
+    "neck_pain",
+    "dizziness"
+  ],
+  "fast_heart_rate": [
+    "fast_heart_rate",
+    "fatigue",
+    "sweating",
+    "chest_pain"
+  ],
+  "pain_during_bowel_movements": [
+    "pain_during_bowel_movements",
+    "irritation_in_anus",
+    "bloody_stool",
+    "constipation"
+  ],
+  "pain_in_anal_region": [
+    "pain_in_anal_region",
+    "pain_during_bowel_movements",
+    "bloody_stool",
+    "constipation"
+  ],
+  "bloody_stool": [
+    "bloody_stool",
+    "pain_during_bowel_movements",
+    "pain_in_anal_region",
+    "constipation"
+  ],
+  "irritation_in_anus": [
+    "irritation_in_anus",
+    "pain_during_bowel_movements",
+    "pain_in_anal_region",
+    "constipation"
+  ],
+  "neck_pain": [
+    "neck_pain",
+    "painful_walking",
+    "joint_pain",
+    "dizziness"
+  ],
+  "dizziness": [
+    "dizziness",
+    "loss_of_balance",
+    "abnormal_menstruation",
+    "irritability"
+  ],
+  "cramps": [
+    "cramps",
+    "obesity",
+    "fatigue",
+    "bruising"
+  ],
+  "bruising": [
+    "bruising",
+    "obesity",
+    "fatigue",
+    "cramps"
+  ],
+  "obesity": [
+    "obesity",
+    "fatigue",
+    "increased_appetite",
+    "polyuria"
+  ],
+  "swollen_legs": [
+    "swollen_legs",
+    "obesity",
+    "fatigue",
+    "bruising"
+  ],
+  "swollen_blood_vessels": [
+    "swollen_blood_vessels",
+    "obesity",
+    "fatigue",
+    "bruising"
+  ],
+  "puffy_face_and_eyes": [
+    "puffy_face_and_eyes",
+    "depression",
+    "irritability",
+    "abnormal_menstruation"
+  ],
+  "enlarged_thyroid": [
+    "enlarged_thyroid",
+    "depression",
+    "abnormal_menstruation",
+    "swollen_extremeties"
+  ],
+  "brittle_nails": [
+    "brittle_nails",
+    "depression",
+    "abnormal_menstruation",
+    "swollen_extremeties"
+  ],
+  "swollen_extremeties": [
+    "swollen_extremeties",
+    "depression",
+    "abnormal_menstruation",
+    "irritability"
+  ],
+  "excessive_hunger": [
+    "excessive_hunger",
+    "irritability",
+    "blurred_and_distorted_vision",
+    "fatigue"
+  ],
+  "extra_marital_contacts": [
+    "extra_marital_contacts",
+    "high_fever",
+    "muscle_wasting",
+    "patches_in_throat"
+  ],
+  "drying_and_tingling_lips": [
+    "drying_and_tingling_lips",
+    "palpitations",
+    "slurred_speech",
+    "irritability"
+  ],
+  "slurred_speech": [
+    "slurred_speech",
+    "excessive_hunger",
+    "irritability",
+    "palpitations"
+  ],
+  "knee_pain": [
+    "knee_pain",
+    "neck_pain",
+    "joint_pain",
+    "hip_joint_pain"
+  ],
+  "hip_joint_pain": [
+    "hip_joint_pain",
+    "neck_pain",
+    "joint_pain",
+    "knee_pain"
+  ],
+  "muscle_weakness": [
+    "muscle_weakness",
+    "irritability",
+    "abnormal_menstruation",
+    "weight_loss"
+  ],
+  "stiff_neck": [
+    "stiff_neck",
+    "indigestion",
+    "acidity",
+    "headache"
+  ],
+  "swelling_joints": [
+    "swelling_joints",
+    "painful_walking",
+    "neck_pain",
+    "joint_pain"
+  ],
+  "movement_stiffness": [
+    "movement_stiffness",
+    "swelling_joints",
+    "muscle_weakness",
+    "stiff_neck"
+  ],
+  "spinning_movements": [
+    "spinning_movements",
+    "nausea",
+    "vomiting",
+    "headache"
+  ],
+  "loss_of_balance": [
+    "loss_of_balance",
+    "headache",
+    "dizziness",
+    "nausea"
+  ],
+  "unsteadiness": [
+    "unsteadiness",
+    "nausea",
+    "vomiting",
+    "headache"
+  ],
+  "weakness_of_one_body_side": [
+    "weakness_of_one_body_side",
+    "altered_sensorium",
+    "headache",
+    "vomiting"
+  ],
+  "loss_of_smell": [
+    "loss_of_smell",
+    "congestion",
+    "runny_nose",
+    "redness_of_eyes"
+  ],
+  "bladder_discomfort": [
+    "bladder_discomfort",
+    "continuous_feel_of_urine",
+    "burning_micturition",
+    "foul_smell_of urine"
+  ],
+  "foul_smell_of urine": [
+    "foul_smell_of urine",
+    "bladder_discomfort",
+    "continuous_feel_of_urine",
+    "burning_micturition"
+  ],
+  "continuous_feel_of_urine": [
+    "continuous_feel_of_urine",
+    "bladder_discomfort",
+    "burning_micturition",
+    "foul_smell_of urine"
+  ],
+  "passage_of_gases": [
+    "passage_of_gases",
+    "abdominal_pain",
+    "vomiting",
+    "internal_itching"
+  ],
+  "internal_itching": [
+    "internal_itching",
+    "abdominal_pain",
+    "vomiting",
+    "passage_of_gases"
+  ],
+  "toxic_look_(typhos)": [
+    "toxic_look_(typhos)",
+    "high_fever",
+    "fatigue",
+    "chills"
+  ],
+  "depression": [
+    "depression",
+    "irritability",
+    "enlarged_thyroid",
+    "brittle_nails"
+  ],
+  "irritability": [
+    "irritability",
+    "excessive_hunger",
+    "fatigue",
+    "abnormal_menstruation"
+  ],
+  "muscle_pain": [
+    "muscle_pain",
+    "headache",
+    "nausea",
+    "chills"
+  ],
+  "altered_sensorium": [
+    "altered_sensorium",
+    "headache",
+    "vomiting",
+    "weakness_of_one_body_side"
+  ],
+  "red_spots_over_body": [
+    "red_spots_over_body",
+    "loss_of_appetite",
+    "headache",
+    "malaise"
+  ],
+  "belly_pain": [
+    "belly_pain",
+    "high_fever",
+    "fatigue",
+    "chills"
+  ],
+  "abnormal_menstruation": [
+    "abnormal_menstruation",
+    "irritability",
+    "mood_swings",
+    "fatigue"
+  ],
+  "dischromic _patches": [
+    "dischromic _patches",
+    "itching",
+    "nodal_skin_eruptions",
+    "skin_rash"
+  ],
+  "watering_from_eyes": [
+    "watering_from_eyes",
+    "continuous_sneezing",
+    "shivering",
+    "chills"
+  ],
+  "increased_appetite": [
+    "increased_appetite",
+    "polyuria",
+    "fatigue",
+    "weight_loss"
+  ],
+  "polyuria": [
+    "polyuria",
+    "increased_appetite",
+    "fatigue",
+    "weight_loss"
+  ],
+  "family_history": [
+    "family_history",
+    "fatigue",
+    "loss_of_appetite",
+    "high_fever"
+  ],
+  "mucoid_sputum": [
+    "mucoid_sputum",
+    "breathlessness",
+    "high_fever",
+    "family_history"
+  ],
+  "rusty_sputum": [
+    "rusty_sputum",
+    "chest_pain",
+    "fast_heart_rate",
+    "chills"
+  ],
+  "lack_of_concentration": [
+    "lack_of_concentration",
+    "loss_of_balance",
+    "dizziness",
+    "headache"
+  ],
+  "visual_disturbances": [
+    "visual_disturbances",
+    "indigestion",
+    "acidity",
+    "headache"
+  ],
+  "receiving_blood_transfusion": [
+    "receiving_blood_transfusion",
+    "receiving_unsterile_injections",
+    "yellowing_of_eyes",
+    "malaise"
+  ],
+  "receiving_unsterile_injections": [
+    "receiving_unsterile_injections",
+    "receiving_blood_transfusion",
+    "yellowing_of_eyes",
+    "malaise"
+  ],
+  "coma": [
+    "coma",
+    "stomach_bleeding",
+    "yellowing_of_eyes",
+    "abdominal_pain"
+  ],
+  "stomach_bleeding": [
+    "stomach_bleeding",
+    "yellowing_of_eyes",
+    "abdominal_pain",
+    "loss_of_appetite"
+  ],
+  "distention_of_abdomen": [
+    "distention_of_abdomen",
+    "yellowish_skin",
+    "vomiting",
+    "swelling_of_stomach"
+  ],
+  "history_of_alcohol_consumption": [
+    "history_of_alcohol_consumption",
+    "yellowish_skin",
+    "vomiting",
+    "swelling_of_stomach"
+  ],
+  "fluid_overload.1": [
+    "fluid_overload.1",
+    "yellowish_skin",
+    "vomiting",
+    "swelling_of_stomach"
+  ],
+  "blood_in_sputum": [
+    "blood_in_sputum",
+    "phlegm",
+    "chest_pain",
+    "malaise"
+  ],
+  "prominent_veins_on_calf": [
+    "prominent_veins_on_calf",
+    "obesity",
+    "fatigue",
+    "bruising"
+  ],
+  "palpitations": [
+    "palpitations",
+    "excessive_hunger",
+    "slurred_speech",
+    "irritability"
+  ],
+  "painful_walking": [
+    "painful_walking",
+    "swelling_joints",
+    "neck_pain",
+    "joint_pain"
+  ],
+  "pus_filled_pimples": [
+    "pus_filled_pimples",
+    "skin_rash",
+    "blackheads",
+    "scurring"
+  ],
+  "blackheads": [
+    "blackheads",
+    "skin_rash",
+    "pus_filled_pimples",
+    "scurring"
+  ],
+  "scurring": [
+    "scurring",
+    "skin_rash",
+    "pus_filled_pimples",
+    "blackheads"
+  ],
+  "skin_peeling": [
+    "skin_peeling",
+    "skin_rash",
+    "joint_pain",
+    "silver_like_dusting"
+  ],
+  "silver_like_dusting": [
+    "silver_like_dusting",
+    "skin_rash",
+    "joint_pain",
+    "skin_peeling"
+  ],
+  "small_dents_in_nails": [
+    "small_dents_in_nails",
+    "skin_rash",
+    "joint_pain",
+    "skin_peeling"
+  ],
+  "inflammatory_nails": [
+    "inflammatory_nails",
+    "skin_rash",
+    "joint_pain",
+    "skin_peeling"
+  ],
+  "blister": [
+    "blister",
+    "skin_rash",
+    "red_sore_around_nose",
+    "yellow_crust_ooze"
+  ],
+  "red_sore_around_nose": [
+    "red_sore_around_nose",
+    "skin_rash",
+    "blister",
+    "yellow_crust_ooze"
+  ],
+  "yellow_crust_ooze": [
+    "yellow_crust_ooze",
+    "skin_rash",
+    "blister",
+    "red_sore_around_nose"
+  ]
+}

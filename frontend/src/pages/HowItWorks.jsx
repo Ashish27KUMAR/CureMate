@@ -55,9 +55,9 @@ export default function HowItWorks() {
           Introduction
         </h2>
         <p className="text-gray-700 leading-relaxed max-w-3xl mx-auto">
-          Our healthcare app helps you check symptoms, manage your health
-          history, and stay in control of your well-being. The process is quick,
-          simple, and user-friendly.
+          Our CureMate app helps you check symptoms, manage your health history,
+          and stay in control of your well-being. The process is quick, simple,
+          and user-friendly.
         </p>
       </section>
 

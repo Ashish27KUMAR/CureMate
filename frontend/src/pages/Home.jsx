@@ -1,26 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import { FaHeartbeat } from "react-icons/fa";
 import AiVdo from "../assets/AI_s_Impact_on_Healthcare_Video.mp4";
-const backendUrl = import.meta.env.VITE_API_BASE_URL;
 
 export default function Home() {
-  const [backendStatus, setBackendStatus] = useState("⏳ Checking...");
-
-  useEffect(() => {
-    axios
-      .get(`${backendUrl}/`)
-      .then((res) => {
-        if (res.data.message) {
-          setBackendStatus(`✅ ${res.data.message}`);
-        } else {
-          setBackendStatus("✅ Backend is running");
-        }
-      })
-      .catch(() => setBackendStatus("❌ Backend not reachable"));
-  }, []);
-
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Video Background */}
@@ -63,11 +46,6 @@ export default function Home() {
           >
             Try Symptom Checker
           </Link>
-        </div>
-
-        {/* Backend status banner */}
-        <div className="fixed left-0 bottom-0 mb-4 ml-4 p-3 text-sm rounded border border-blue-200 bg-white/90 backdrop-blur-md shadow-2xl text-blue-950">
-          <strong>Backend Status:</strong> {backendStatus}
         </div>
       </div>
     </div>

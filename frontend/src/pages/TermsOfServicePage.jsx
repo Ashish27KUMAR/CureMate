@@ -11,8 +11,8 @@ export default function TermsOfServicePage() {
         </h1>
         <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto">
           Please read these Terms of Service carefully before using our
-          services. By accessing or using our healthcare app, you agree to
-          comply with and be bound by the terms outlined in this agreement.
+          services. By accessing or using our CureMate, you agree to comply with
+          and be bound by the terms outlined in this agreement.
         </p>
       </div>
 
@@ -61,7 +61,7 @@ export default function TermsOfServicePage() {
           Use of Services
         </h2>
         <p className="text-lg text-gray-700 leading-relaxed">
-          Our healthcare app and services are intended for informational and
+          Our CureMate and services are intended for informational and
           educational purposes only. The app does not replace professional
           medical advice, diagnosis, or treatment. You should always seek the
           advice of a qualified healthcare provider for any medical conditions.

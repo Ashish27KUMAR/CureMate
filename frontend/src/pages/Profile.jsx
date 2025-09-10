@@ -100,7 +100,7 @@ export default function Profile() {
       if (error.code === "auth/requires-recent-login") {
         setError("You need to sign in again to delete your account.");
       } else {
-        setError("Failed to delete account. Please try again.");
+        setError("Incorrect password. Please try again.");
       }
     } finally {
       setDeleting(false);

@@ -84,7 +84,7 @@ export default function AboutUsPage() {
         </h2>
         <p className="text-lg text-gray-700 mb-6">
           Have questions or need assistance? We’d love to hear from you. Reach
-          out anytime — we’re here to help!
+          out anytime, we’re here to help!
         </p>
         <Link
           to="/support"

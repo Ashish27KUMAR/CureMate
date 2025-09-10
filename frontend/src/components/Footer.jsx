@@ -9,9 +9,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* App Info */}
         <div>
-          <h2 className="text-xl font-semibold text-white mb-4">
-            Healthcare App
-          </h2>
+          <h2 className="text-xl font-semibold text-white mb-4">CureMate</h2>
           <p className="text-gray-400 text-sm">
             Empowering you to take control of your health with ease. Our app
             enables you to track symptoms, monitor your well-being, and make
@@ -67,41 +65,32 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Social Media */}
+        {/* Get Support */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
-          <div className="flex space-x-6 text-2xl">
-            <a
-              href="#"
-              className="text-gray-400 hover:text-blue-500 transition duration-200 ease-in-out"
-            >
-              <FaFacebook />
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-blue-400 transition duration-200 ease-in-out"
-            >
-              <FaTwitter />
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-pink-500 transition duration-200 ease-in-out"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-blue-600 transition duration-200 ease-in-out"
-            >
-              <FaLinkedin />
-            </a>
-          </div>
+          <h3 className="text-lg font-semibold text-white mb-4">Get Support</h3>
+          <ul className="space-y-2 text-sm text-gray-400">
+            <li>
+              <span className="text-white">Email:</span>{" "}
+              <a
+                href="mailto:curemate.project@gmail.com"
+                className="text-blue-500 hover:text-blue-700 underline"
+              >
+                curemate.project@gmail.com
+              </a>
+            </li>
+            <li>
+              <span className="text-white">Phone:</span>{" "}
+              <span className="text-blue-500 hover:text-blue-700">
+                +91 993**1 90***
+              </span>
+            </li>
+          </ul>
         </div>
       </div>
 
       {/* Divider */}
       <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} Healthcare App. All rights reserved.
+        © {new Date().getFullYear()} CureMate. All rights reserved.
       </div>
     </footer>
   );

@@ -39,19 +39,38 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # -----------------------------
 # Firebase Admin init
 # -----------------------------
-SERVICE_ACCOUNT = os.path.join(BASE_DIR, "firebase-service-account.json")
-if not os.path.exists(SERVICE_ACCOUNT):
-    raise FileNotFoundError(
-        f"Missing Firebase service account. Place it at: {SERVICE_ACCOUNT}"
-    )
+firebase_credentials = os.getenv("FIREBASE_CREDENTIALS")  # JSON string env var
+firebase_cred_path = os.getenv("FIREBASE_CRED_PATH")  # optional file path env var fallback
 
-# initialize firebase admin once
 if not firebase_admin._apps:
-    cred = credentials.Certificate(SERVICE_ACCOUNT)
-    firebase_admin.initialize_app(cred)
+    if firebase_credentials:
+        # Initialize Firebase from JSON string env var (production)
+        try:
+            cred_dict = json.loads(firebase_credentials)
+            cred = credentials.Certificate(cred_dict)
+            firebase_admin.initialize_app(cred)
+        except json.JSONDecodeError as e:
+            raise RuntimeError(f"Failed to parse FIREBASE_CREDENTIALS env var: {e}")
+    elif firebase_cred_path and os.path.exists(firebase_cred_path):
+        # Initialize Firebase from local file path (dev)
+        cred = credentials.Certificate(firebase_cred_path)
+        firebase_admin.initialize_app(cred)
+    else:
+        # Fallback: check default local file (for local dev)
+        default_path = os.path.join(BASE_DIR, "firebase-service-account.json")
+        if os.path.exists(default_path):
+            cred = credentials.Certificate(default_path)
+            firebase_admin.initialize_app(cred)
+        else:
+            raise FileNotFoundError(
+                "Missing Firebase credentials. "
+                "Set FIREBASE_CREDENTIALS env var (JSON string), or "
+                "FIREBASE_CRED_PATH env var (file path), or place 'firebase-service-account.json' locally."
+            )
 
 # Firestore client
 db = firestore.client()
+
 
 # -----------------------------
 # Load dataset files

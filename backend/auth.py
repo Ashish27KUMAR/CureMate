@@ -8,51 +8,49 @@ from dotenv import load_dotenv
 # Load local .env if present (for local dev)
 load_dotenv()
 
-# First try Render-style JSON credentials
-firebase_credentials = os.getenv("FIREBASE_CREDENTIALS")
-
-# If not available, fallback to local JSON file path
-firebase_cred_path = os.getenv("FIREBASE_CRED_PATH")
+# Get Firebase credentials from environment variables
+firebase_credentials_json = os.getenv("FIREBASE_CREDENTIALS")  # JSON string for Render
+firebase_cred_path = os.getenv("FIREBASE_CRED_PATH")          # File path for local dev
 
 if not firebase_admin._apps:
-    if firebase_credentials:
-        # Running on Render: credentials stored as JSON in env variable
-        cred_dict = json.loads(firebase_credentials)
-        cred = credentials.Certificate(cred_dict)
-        firebase_admin.initialize_app(cred)
+    if firebase_credentials_json:
+        # Running on Render or similar: load credentials from JSON string env var
+        try:
+            cred_dict = json.loads(firebase_credentials_json)
+            cred = credentials.Certificate(cred_dict)
+            firebase_admin.initialize_app(cred)
+            print("Firebase initialized using JSON string from env variable")
+        except json.JSONDecodeError as e:
+            raise ValueError(f"Invalid JSON in FIREBASE_CREDENTIALS: {str(e)}")
     elif firebase_cred_path:
-        # Running locally: credentials stored in JSON file
+        # Running locally: load credentials from local JSON file path
+        if not os.path.exists(firebase_cred_path):
+            raise FileNotFoundError(f"Firebase credential file not found at {firebase_cred_path}")
         cred = credentials.Certificate(firebase_cred_path)
         firebase_admin.initialize_app(cred)
+        print(f"Firebase initialized using credential file at {firebase_cred_path}")
     else:
-        raise ValueError("No Firebase credentials found. Set FIREBASE_CREDENTIALS or FIREBASE_CRED_PATH")
+        raise ValueError(
+            "No Firebase credentials found. "
+            "Set FIREBASE_CREDENTIALS (JSON string) or FIREBASE_CRED_PATH (file path)"
+        )
 
 router = APIRouter(prefix="/auth", tags=["Auth"])
 
-# Middleware-like function to verify token
 def verify_firebase_token(authorization: str = Header(...)):
     try:
-        # Ensure the authorization header starts with "Bearer "
         if not authorization.startswith("Bearer "):
             raise HTTPException(status_code=401, detail="Invalid auth header")
-        
-        # Extract the ID token from the Authorization header
         id_token = authorization.split(" ")[1]
-        
-        # Verify the ID token using Firebase Authentication
         decoded_token = auth.verify_id_token(id_token)
         return decoded_token
-    
     except Exception as e:
         raise HTTPException(status_code=401, detail=f"Token verification failed: {str(e)}")
 
 @router.get("/me")
 def get_current_user(user=Depends(verify_firebase_token)):
-    """
-    Returns the logged-in Firebase user details
-    """
     return {
         "uid": user["uid"],
         "email": user.get("email"),
-        "phone": user.get("phone_number")
+        "phone": user.get("phone_number"),
     }

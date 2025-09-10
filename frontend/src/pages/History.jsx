@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { auth } from "../firebase";
 import { FaCheckCircle } from "react-icons/fa";
+
 const backendUrl = import.meta.env.VITE_API_BASE_URL;
 
 export default function History() {
   const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [selected, setSelected] = useState(null); // for modal
+  const [selected, setSelected] = useState(null);
 
   useEffect(() => {
     fetchHistory();
@@ -56,10 +57,30 @@ export default function History() {
     }
   }
 
+  // Clear all history entries on backend and frontend
+  async function handleClearAll() {
+    if (!window.confirm("Delete all history?")) return;
+    const user = auth.currentUser;
+    if (!user) {
+      setError("Please login.");
+      return;
+    }
+    try {
+      const token = await user.getIdToken();
+      await axios.delete(`${backendUrl}/history`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      setHistory([]); // Clear frontend state
+    } catch (err) {
+      console.error(err);
+      alert("Failed to delete all history.");
+    }
+  }
+
   function formatDateTime(dateStr) {
     if (!dateStr) return "—";
     const date = new Date(dateStr);
-    if (isNaN(date.getTime())) return dateStr; // fallback
+    if (isNaN(date.getTime())) return dateStr;
     return date.toLocaleString("en-IN", {
       day: "2-digit",
       month: "short",
@@ -70,7 +91,6 @@ export default function History() {
     });
   }
 
-  // Close modal when clicking outside
   const closeModal = () => setSelected(null);
 
   return (
@@ -79,7 +99,7 @@ export default function History() {
         <h2 className="text-2xl font-bold">Your History</h2>
         {history.length > 0 && (
           <button
-            onClick={() => setHistory([])}
+            onClick={handleClearAll}
             className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
           >
             Clear All
@@ -91,7 +111,6 @@ export default function History() {
       {loading && <div>Loading...</div>}
       {!loading && history.length === 0 && <div>No history available.</div>}
 
-      {/* History List */}
       <div className="space-y-4 mt-4">
         {history.map((h) => (
           <div key={h.id} className="p-4 border rounded bg-white shadow-sm">
@@ -127,7 +146,6 @@ export default function History() {
         ))}
       </div>
 
-      {/* Modal for viewing details */}
       {selected && (
         <div
           className="fixed inset-0 flex items-center justify-center backdrop-blur-sm z-20"
@@ -137,7 +155,6 @@ export default function History() {
             className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full sm:w-96 mx-4 relative"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Header with title + close button */}
             <div className="flex justify-between items-center mb-3">
               <h3 className="text-xl text-blue-500 font-bold flex items-center gap-2">
                 <FaCheckCircle className="text-green-500" />

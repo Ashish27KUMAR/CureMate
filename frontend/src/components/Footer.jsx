@@ -73,7 +73,7 @@ export default function Footer() {
               <span className="text-white">Email:</span>{" "}
               <a
                 href="mailto:curemate.project@gmail.com"
-                className="text-blue-500 hover:text-blue-700 underline"
+                className="text-blue-500 hover:text-blue-700"
               >
                 curemate.project@gmail.com
               </a>

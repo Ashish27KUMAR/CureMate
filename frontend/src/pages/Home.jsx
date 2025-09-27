@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import { FaHeartbeat } from "react-icons/fa";
 import AiVdo from "../assets/AI_s_Impact_on_Healthcare_Video.mp4";
+const backendUrl = import.meta.env.VITE_API_BASE_URL;
 
 export default function Home() {
+  const [backendStatus, setBackendStatus] = useState("checking");
+
+  useEffect(() => {
+    axios
+      .get(`${backendUrl}/`)
+      .then((res) => {
+        if (res.data.message) {
+          setBackendStatus("connected");
+        } else {
+          setBackendStatus("connected");
+        }
+      })
+      .catch(() => setBackendStatus("disconnected"));
+  }, []);
+
+  const dotColor =
+    backendStatus === "connected" ? "bg-green-500" : "bg-red-500";
+
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Video Background */}
@@ -13,15 +33,30 @@ export default function Home() {
         loop
         muted
         playsInline
-        style={{
-          filter: "brightness(40%)", // From first code, to match black overlay brightness
-        }}
+        style={{ filter: "brightness(40%)" }}
       >
         <source src={AiVdo} type="video/mp4" />
       </video>
 
-      {/* Black Overlay for Text Visibility (from first code) */}
+      {/* Black Overlay */}
       <div className="absolute inset-0 bg-black opacity-50 pointer-events-none"></div>
+
+      {/* Backend Status Dot - fixed top center */}
+      <div className="fixed top-20 left-1/2 transform -translate-x-1/2 z-50 flex items-center gap-2 bg-white/90 backdrop-blur-md px-3 py-1 rounded shadow-lg border border-gray-300">
+        <span
+          className={`w-4 h-4 rounded-full ${dotColor} animate-pulse`}
+          aria-label={`Backend is ${backendStatus}`}
+          title={`Backend is ${backendStatus}`}
+        ></span>
+        <span className="text-gray-900 font-medium text-sm select-none">
+          Backend Status:{" "}
+          {backendStatus === "connected"
+            ? "Online"
+            : backendStatus === "checking"
+            ? "Checking..."
+            : "Offline"}
+        </span>
+      </div>
 
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col gap-6 items-center justify-center w-full px-6 pt-24 sm:pt-32 pb-10 text-center">

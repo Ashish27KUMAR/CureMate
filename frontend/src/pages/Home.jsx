@@ -67,7 +67,7 @@ export default function Home() {
           </span>
         </span>
         <h1 className="text-white font-bold text-4xl sm:text-5xl lg:text-6xl drop-shadow-xl">
-          Welcome to <span className="text-blue-400">CureMate</span> 🚀
+          Welcome to <span className="text-blue-400">CureMate</span> 🩺
         </h1>
         <p className="mt-2 text-lg sm:text-xl text-gray-100 max-w-2xl mx-auto font-medium">
           <span className="bg-black/40 px-2 py-1 rounded-lg">

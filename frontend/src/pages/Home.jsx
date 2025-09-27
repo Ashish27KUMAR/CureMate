@@ -41,8 +41,8 @@ export default function Home() {
       {/* Black Overlay */}
       <div className="absolute inset-0 bg-black opacity-50 pointer-events-none"></div>
 
-      {/* Backend Status Dot - fixed top center */}
-      <div className="fixed top-20 left-1/2 transform -translate-x-1/2 z-50 flex items-center gap-2 bg-white/90 backdrop-blur-md px-3 py-1 rounded shadow-lg border border-gray-300">
+      {/* Backend Status Dot - positioned below navbar */}
+      <div className="fixed top-20 left-1/2 transform -translate-x-1/2 z-20 flex items-center gap-2 bg-white/90 backdrop-blur-md px-3 py-1 rounded shadow-lg border border-gray-300">
         <span
           className={`w-4 h-4 rounded-full ${dotColor} animate-pulse`}
           aria-label={`Backend is ${backendStatus}`}

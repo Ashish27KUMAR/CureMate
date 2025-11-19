@@ -35,7 +35,7 @@ The system uses **React + TailwindCSS** for UI and a **Python-based Machine Lear
               └──────────────┬────────────┘
                              │
                              ▼
-                 REST API Request/Response
+                 FastAPI Request/Response
                              │
                              ▼
         ┌──────────────────────────────────────┐
